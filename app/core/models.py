@@ -1,7 +1,10 @@
 from django.db import models # naqo
 
-from django.contrib.auth.models import (AbstractBaseUser,BaseUserManager,PermissionsMixin)
-
+from django.contrib.auth.models import (
+    AbstractBaseUser,
+    BaseUserManager,
+    PermissionsMixin,
+)
 
 class UserManager(BaseUserManager):
     """Manager for Users."""
@@ -12,6 +15,8 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
 
         return user
+
+
 class User(AbstractBaseUser, PermissionsMixin):
     """User in the system"""
 
@@ -23,4 +28,5 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
+
 

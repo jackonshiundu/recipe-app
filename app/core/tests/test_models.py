@@ -31,7 +31,6 @@ class ModalCase(TestCase):
             user = get_user_model().objects.create_user(email, 'sample123')
             self.assertEqual(user.email, expected)
 
-
     def test_new_user_without_email_raises_error(self):
         """Testing a user creating a user
            without an email raises a ValueError"""
@@ -46,4 +45,3 @@ class ModalCase(TestCase):
 
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
-

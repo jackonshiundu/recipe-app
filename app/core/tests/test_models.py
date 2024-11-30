@@ -40,7 +40,7 @@ class ModalCase(TestCase):
     def test_create_superuser(self):
         """Test creating a superuser."""
         user = get_user_model().objects.create_superuser(
-            'test@exapmple.com','test123'
+            'test@exapmple.com', 'test123'
         )
 
         self.assertTrue(user.is_superuser)

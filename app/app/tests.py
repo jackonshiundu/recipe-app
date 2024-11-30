@@ -2,4 +2,5 @@
 sample test
 """
 
-from django.test import SimpleTestCase # naqo
+
+from django.test import SimpleTestCase  # noqa
